@@ -79,7 +79,7 @@ header {
     text-transform: uppercase;
 }
 
-header a {
+.phone {
     font-size: 20px;
     font-weight: 500;
     color: rgb(255, 255, 255);
@@ -145,57 +145,212 @@ header a {
     height: 200px;
 }
 
-.advantages_screen .advantages {
+.advantages {
     flex: 1;
 }
 
-.advantages_screen .caption {
+.advantages_caption {
     font-size: 22px;
 }
 
-.advantages_screen .caption span {
+.advantages_caption span {
     background: #ffd800;
 }
 
-.advantages_screen .advantages_wr {
+.advantages_wr {
     display: flex;
     flex-wrap: wrap;
 }
 
-.advantages_screen .advantages_wr .advantage {
+.advantages_wr .advantage {
     box-sizing: border-box;
     width: 33.3333%;
 }
-.advantages_screen .advantages_wr .advantage .icon {
+
+.advantages_wr .advantage .icon {
 }
-.advantages_screen .advantages_wr .advantage .text1 {
+
+.advantages_wr .advantage .text1 {
     font-size: 20px;
     font-weight: 700;
     text-align: center;
 }
 
-.advantages_screen .advantages_wr .advantage .text2 {
+.advantages_wr .advantage .text2 {
     font-size: 15px;
 }
 
 /*branches_screen*/
 
 .branches_screen {
+    background: black;
+    padding: 50px 0;
 }
-.branches_screen .wrapper {
+
+.caption {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
 }
-.branches_screen .caption {
+
+.document {
+    font-size: 18px;
+    color: rgb(255, 216, 0);
+    text-align: center;
 }
-.branches_screen .order {
-}
+
 .branches_screen .branches {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
+
 .branches_screen .branch {
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 10px;
 }
+
+.branches_screen .branch_wr {
+    background: #ffffff;
+}
+
+.branches_screen .branch_name {
+    display: flex;
+    height: 85px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
 .branches_screen h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.333;
+    padding: 0 20px;
+    margin: auto 0;
 }
+
+.branches_screen .links {
+    padding: 20px;
+}
+
 .branches_screen a {
     display: block;
+    font-size: 15px;
+    color: rgb(0, 101, 179);
+    padding: 5px 0;
 }
+
 .branches_screen .button {
+    color: rgb(0, 0, 0);
+    padding: 0;
+}
+
+/*form_screen*/
+
+.form_screen .advantages {
+    margin: auto 0;
+}
+
+.form_screen .form {
+    box-sizing: border-box;
+    border: 5px solid rgb(255, 216, 0);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    max-width: 415px;
+}
+
+.form_screen .form .form_caption {
+    font-size: 30px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.form_screen .form .wpcf7-form-control-wrap {
+    display: block;
+    margin: 13px 0;
+}
+
+.form_screen .form .wpcf7-form-control {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+    height: 56px;
+    width: 100%;
+    font-size: 20px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    color: rgb(131, 131, 131);
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.form_screen .form input:not([type=submit]):focus {
+	border: 1px solid #000082;
+}
+
+.form_screen .button {
+    width: 100%;
+}
+
+/*license_screen*/
+
+.license_screen {
+    background: black;
+    padding: 50px 0;
+}
+
+
+
+/*contacts_screen*/
+
+.contacts_screen {
+    background: #ffd800;
+    padding: 100px 0;
+}
+
+.contacts_screen .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts_screen .contact {
+    width: 33.3333%;
+}
+
+.contacts_screen .contact. .icon {
+}
+
+.contacts_screen .contact .text1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contacts_screen .contact .text2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+/*map_screen*/
+
+.map_screen {
+    height: 345px;
+}
+
+/*footer*/
+
+footer {
+    background: #202223;
+    padding: 15px 0;
+}
+
+footer .sitename {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
 }
