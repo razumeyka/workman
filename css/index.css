@@ -14,6 +14,13 @@
 
 @font-face {
   font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium.ttf')  format('truetype'), url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf')  format('truetype'), url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
@@ -88,13 +95,27 @@ header .institut {
     font-size: 18px;
     font-weight: 500;
     color: rgb(255, 255, 255);
+    letter-spacing: 0.1px;
     text-decoration: none;
+    position: relative;
+    padding-left: 40px;
+}
+
+.phone::before {
+    content: "";
+    background: url('../images/sprites.svg') no-repeat -10px -10px;
+	width: 30px;
+	height: 30px;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
 /*main_screen*/
 
 .main_screen {
-    background: rgb(0, 0, 0);
+    background: url(../images/background.jpg) no-repeat center;
+    background-size: cover;
     padding: 100px 0;
 }
 
@@ -115,7 +136,6 @@ header .institut {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.3;
-    max-width: 570px;
     margin: 0;
 }
 
@@ -124,40 +144,23 @@ header .institut {
     margin: 15px 0 35px;
 }
 
-.button {
+.main_screen .banner .remote_education {
     display:inline-block;
-    box-sizing: border-box;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-decoration: none;
-    outline: none;
+    background-color: rgb(255, 216, 0);
     color: rgb(0, 0, 0);
     text-align: center;
-    background-color: rgb(255, 216, 0);
     width: 276px;
     height: 45px;
     line-height: 45px;
 }
 
-.main_screen .workman1 {
-    background: url(../images/workman1.png) no-repeat;
-    background-size: contain;
-    width: 500px;
-    height: 500px;
+.main_screen .workmen {
+    background: url(../images/workmen.png) no-repeat;
+    width: 594px;
+    height: 530px;
     position: absolute;
-    right: 145px;
-    bottom: -100px;
-}
-
-.main_screen .workman2 {
-    background: url(../images/workman2.png) no-repeat;
-    background-size: contain;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    right: -53px;
-    bottom: -73px;
+    right: 65px;
+    bottom: -102px;
 }
 
 /*advantages_screen*/
@@ -172,15 +175,29 @@ header .institut {
 }
 
 .advantages_screen .certificate {
-    background: red;
-    width: 375px;
-    height: 295px;
-    margin: auto 0;;
+    background: url(../images/diploma.jpg) no-repeat center;
+    background-size: cover;
+    width: 361px;
+    height: 283px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    margin: auto 0;
 }
 
 .advantages {
     flex: 1;
     padding-left: 140px;
+    position: relative;
+}
+
+.advantages::before {
+    content: "";
+    background: url('../images/sprites.svg') no-repeat -6px -505px;
+	width: 133px;
+	height: 104px;
+    position: absolute;
+    left: 0;
+    top: 100px;
 }
 
 .advantages_caption {
@@ -193,12 +210,13 @@ header .institut {
     color: rgb(0, 0, 0);
     text-decoration: none;
     cursor: default;
+    padding: 3px 0;
 }
 
 .advantages_wr {
     display: flex;
     flex-wrap: wrap;
-    margin: 55px -30px 0;
+    margin: 60px -30px 0;
 }
 
 .advantages_wr .advantage {
@@ -208,10 +226,18 @@ header .institut {
 }
 
 .advantages_wr .advantage .icon {
-    width: 110px;
-    height: 110px;
-    background: #ffd800;
-    margin: 0 auto 20px;
+    background: url('../images/sprites.svg') no-repeat -8px -173px;
+	width: 103px;
+	height: 101px;
+    margin: 0 auto 26px;
+}
+
+.advantages_wr .advantage.knowledge .icon {
+    background-position: -181px -173px;
+}
+
+.advantages_wr .advantage.possibilities .icon {
+    background-position: -354px -174px;
 }
 
 .advantages_wr .advantage .text1 {
@@ -232,7 +258,7 @@ header .institut {
 /*branches_screen*/
 
 .branches_screen {
-    background: black;
+    background: url(../images/background.jpg) center;
     padding: 70px 0 60px;
 }
 
@@ -282,7 +308,7 @@ header .institut {
 }
 
 .branches_screen .links {
-    padding: 25px 30px;
+    padding: 25px 30px 15px;
 }
 
 .branches_screen a {
@@ -292,22 +318,48 @@ header .institut {
     margin-bottom: 15px;
 }
 
-.branches_screen .button {
+.button {
+    display:inline-block;
+    box-sizing: border-box;
+    background-color: rgb(255, 216, 0);
     color: rgb(0, 0, 0);
     font-weight: 500;
-    text-transform: none;
     padding: 0;
     width: 100%;
     margin: 23px 0 5px;
     height: 60px;
     line-height: 60px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
 }
 
 /*form_screen*/
 
 .form_screen .advantages {
     margin: auto 0;
-    padding: 0 55px 0 25px;
+    padding: 0 55px 0 0;
+}
+
+.form_screen .advantages::before {
+    background: url('../images/sprites.svg') no-repeat -239px -505px;
+    right: -72px;
+    top: 37px;
+    left: auto;
+}
+
+.form_screen .advantages_wr .advantage.choice .icon {
+    background-position: -7px -333px;
+}
+
+.form_screen .advantages_wr .advantage.remote .icon {
+    background-position: -181px -334px;
+}
+
+.form_screen .advantages_wr .advantage.standart .icon {
+    background-position: -360px -333px;
 }
 
 .form_screen .form {
@@ -315,7 +367,7 @@ header .institut {
     box-sizing: border-box;
     border: 5px solid rgb(255, 216, 0);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    padding: 64px 48px;
+    padding: 64px 48px 56px;
     max-width: 425px;
     margin: -20px 0;
 }
@@ -337,13 +389,16 @@ header .institut {
     display: block;
     box-sizing: border-box;
     border: 1px solid rgb(168, 168, 168);
-    border-radius: 2px;
-    height: 56px;
+    height: 54px;
     width: 100%;
     font-size: 16px;
     font-weight: 400;
     outline: none;
-    padding: 10px 15px;
+    padding: 0 15px;
+}
+
+.form_screen .form .wpcf7-form-control-wrap.btn {
+    margin: 20px 0;
 }
 
 .form_screen .form input:not([type=submit]):focus {
@@ -352,24 +407,22 @@ header .institut {
 
 .form_screen .button {
     background: #000000;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
     color: rgb(255, 255, 255);
     font-weight: 700;
-    text-transform: none;
+    margin: 0;
 }
 
 /*license_screen*/
 
 .license_screen {
-    background: black;
+    background: url(../images/background.jpg) no-repeat center;
+    background-size: cover;
     padding: 77px 0 91px;
 }
 
 .license_screen .carousel{
     position: relative;
-    margin-top: 35px;
+    margin-top: 32px;
 }
 
 .license_screen .carousel .carousel_wr{
@@ -402,32 +455,31 @@ header .institut {
 
 .license_screen .carousel .one_doc .inner{
 	width: 100%;
-    background: #fff;
-	padding: 6px;
     box-sizing: border-box;
+    border: 5px solid rgb(255, 255, 255);
+    font-size: 0;
 }
 
 .license_screen .carousel .one_doc .content{
-	height:325px;
-	background:#efefef;
+	width: 100%;
 }
 
 .license_screen .carousel .control{
+    background: url('../images/sprites.svg') no-repeat -442px -559px;
+	width: 31px;
+	height: 48px;
 	position:absolute;
-    width: 25px;
-    height: 37px;
     top: 43%;
 	cursor:pointer;
 }
 
 .license_screen .carousel .control.prev{
 	left: -43px;
-    background: #ffffff;
 }
 
 .license_screen .carousel .control.next{
+    background-position: -537px -559px;
 	right: -43px;
-    background: #ffffff;
 }
 
 /*contacts_screen*/
@@ -447,11 +499,20 @@ header .institut {
 }
 
 .contacts_screen .contact .icon {
+    background: url('../images/sprites.svg') -999px -70px;
+    background-color: rgb(0, 0, 0);
     border-radius: 50%;
-    background: rgb(0, 0, 0);
     width: 68px;
     height: 68px;
     margin: 0 auto 20px;
+}
+
+.contacts_screen .contact.email .icon {
+    background-position: -72px -70px;
+}
+
+.contacts_screen .contact.address .icon {
+    background-position: -145px -70px;
 }
 
 .contacts_screen .contact .text1 {
@@ -462,8 +523,11 @@ header .institut {
 }
 
 .contacts_screen .contact .text2 {
+    display: block;
     font-size: 18px;
     text-align: center;
+    text-decoration: none;
+    color: rgb(0,0,0);
 }
 
 /*map_screen*/
@@ -488,3 +552,103 @@ footer .phone {
     font-size: 18px;
     font-weight: 400;
 }
+
+
+/*media*/
+
+@media screen and (max-width: 1279px) {
+    .wrapper {
+        padding: 0 15px;
+    }
+    
+    .main_screen .banner {
+        max-width: 642px;
+    }
+    
+    .main_screen .workmen {
+        background-size: 550px;
+        right: -43px;
+        bottom: -147px;
+    }
+
+    .advantages_screen .wrapper {
+        flex-direction: column-reverse;
+    }
+    
+    .advantages_screen .certificate {
+        margin: 50px auto 0;
+    }
+    
+    .branches_screen .branch {
+        width: 50%;
+    }
+    
+    .form_screen {
+        padding: 50px 0;
+    }
+    
+    .form_screen .wrapper {
+        flex-direction: column;
+    }
+    
+    .form_screen .form {
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main_screen .workmen {
+        display: none;
+    }
+    
+    .main_screen .banner {
+        margin: 0 auto;
+    }
+
+    .contacts_screen .contact {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .between {
+        flex-direction: column;
+    }
+    
+    header .institut {
+        text-align: center;
+    }
+    
+    .phone {
+        margin: 0 auto;
+        padding: 10px 40px;
+    }
+    
+    .phone::before {
+        top: 10px;
+    }
+    
+    .advantages_wr .advantage {
+        width: 100%;
+        margin: 30px 0;
+    }
+    
+    .advantages_wr .advantage .text2 {
+        text-align: center;
+    }
+    
+    .branches_screen .branch {
+        width: 100%;
+    }
+    
+    footer .sitename {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+}
+
