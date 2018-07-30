@@ -579,6 +579,14 @@ footer .phone {
         margin: 50px auto 0;
     }
     
+    .advantages, .form_screen .advantages{
+        padding: 0;
+    }
+    
+    .advantages::before {
+        display: none;
+    }
+    
     .branches_screen .branch {
         width: 50%;
     }
@@ -630,15 +638,6 @@ footer .phone {
         top: 10px;
     }
     
-    .advantages_wr .advantage {
-        width: 100%;
-        margin: 30px 0;
-    }
-    
-    .advantages_wr .advantage .text2 {
-        text-align: center;
-    }
-    
     .branches_screen .branch {
         width: 100%;
     }
@@ -648,7 +647,20 @@ footer .phone {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 670px) {
+    .advantages_wr .advantage {
+        width: 100%;
+        margin: 30px 0;
+    }
+    
+    .advantages_wr .advantage .text2 {
+        text-align: center;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .form_screen .form {
+        padding: 40px 20px;
+    }
 }
 
