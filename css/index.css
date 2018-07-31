@@ -196,8 +196,8 @@ header .institut {
 	width: 133px;
 	height: 104px;
     position: absolute;
-    left: 0;
-    top: 100px;
+    left: 8px;
+    top: 83px;
 }
 
 .advantages_caption {
@@ -344,8 +344,8 @@ header .institut {
 }
 
 .form_screen .advantages::before {
-    background: url('../images/sprites.svg') no-repeat -239px -505px;
-    right: -72px;
+    background: url(../images/sprites.svg) no-repeat -154px -506px;
+    right: -45px;
     top: 37px;
     left: auto;
 }
