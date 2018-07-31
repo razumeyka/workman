@@ -624,6 +624,10 @@ footer .phone {
     .main_screen .banner {
         margin: 0 auto;
     }
+    
+    .license_screen .review_container {
+        width: 133%;
+    }
 
     .contacts_screen .contact {
         width: 100%;
@@ -654,6 +658,10 @@ footer .phone {
         width: 100%;
     }
     
+    .license_screen .review_container {
+        width: 200%;
+    }
+    
     footer .sitename {
         text-align: center;
     }
@@ -673,6 +681,10 @@ footer .phone {
 @media screen and (max-width: 500px) {
     .form_screen .form {
         padding: 40px 20px;
+    }
+    
+    .license_screen .review_container {
+        width: 400%;
     }
 }
 
