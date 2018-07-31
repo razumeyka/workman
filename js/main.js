@@ -1,4 +1,16 @@
 $(document).ready(function(){
+    
+// scroll
+    $(".advantages_caption a").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 800);
+    return false;
+    });
+    
+// licenses
     $('.carousel .next,.carousel .prev').click(function(){
         console.log('click carousel');
         var countslides=jQuery('.review_container').children().children().length-Math.round(parseFloat(jQuery('.review_wrapper').css('width'))/parseFloat(jQuery('.one_doc').css('width')));
