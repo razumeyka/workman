@@ -602,6 +602,18 @@ footer .phone {
     .form_screen .form {
         margin: 50px auto;
     }
+    
+    .license_screen .carousel .control {
+        top: 106%;
+    }
+    
+    .license_screen .carousel .control.next {
+        right: 0;
+    }
+    
+    .license_screen .carousel .control.prev {
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 1024px) {
