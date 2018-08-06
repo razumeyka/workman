@@ -28,4 +28,11 @@ $(document).ready(function(){
         $(this).closest('.carousel').find('.long').css('margin-left','-'+(slide*25)+'%');
 		$(this).closest('.carousel').data('slide',slide);
     })
+    
+// search
+    var options = {
+      valueNames: [ 'name' ]
+    };
+
+    var hackerList = new List('hacker-list', options);
 })
