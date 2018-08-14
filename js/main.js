@@ -24,17 +24,19 @@ $(document).ready(function(){
             slide--;
             if(slide<0)slide=countslides;
         }
-        
-        $(this).closest('.carousel').find('.long').css('margin-left','-'+(slide*25)+'%');
+         $(this).closest('.carousel').find('.long').css('margin-left','-'+(slide*25)+'%');
 		$(this).closest('.carousel').data('slide',slide);
     })
     
 // search
     var options = {
-      valueNames: [ 'name' ]
+    valueNames: [ 'name' ]
     };
+    var branch = new List('branch', options);
+    
+    $('.branch').each(function(){
 
-    var hackerList = new List('hacker-list', options);
+    })
     
     $('.fancybox').fancybox();
 })
