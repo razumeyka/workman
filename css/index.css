@@ -347,7 +347,7 @@ header .institut {
     background-position: -360px -335px;
 }
 
-.form_screen .form {
+.form {
     background: #ffffff;
     box-sizing: border-box;
     border: 5px solid rgb(255, 216, 0);
@@ -357,7 +357,7 @@ header .institut {
     margin: -20px 0;
 }
 
-.form_screen .form .form_caption {
+.form .form_caption {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
@@ -365,12 +365,12 @@ header .institut {
     margin-bottom: 28px;
 }
 
-.form_screen .form .wpcf7-form-control-wrap {
+.form .wpcf7-form-control-wrap {
     display: block;
     margin: 14px 0;
 }
 
-.form_screen .form .wpcf7-form-control {
+.form .wpcf7-form-control {
     display: block;
     box-sizing: border-box;
     border: 1px solid rgb(168, 168, 168);
@@ -382,22 +382,22 @@ header .institut {
     padding: 0 15px;
 }
 
-.form_screen .form .wpcf7-form-control-wrap.btn {
+.form .wpcf7-form-control-wrap.btn {
     margin: 20px 0;
 }
 
-.form_screen .form input:not([type=submit]):focus {
+.form input:not([type=submit]):focus {
 	border: 1px solid #000;
 }
 
-.form_screen .button {
+.form .button {
     background: #000000;
     color: rgb(255, 255, 255);
     font-weight: 700;
     margin: 0;
 }
 
-.form_screen .button:hover{
+.form .button:hover{
     background: #ffd800;
     color: #000;
 }
@@ -656,6 +656,28 @@ footer .phone {
     display: block;
 }
 
+/*fancy-form*/
+
+.fancybox-slide .form {
+    border: 5px solid rgb(255, 216, 0);
+    padding: 64px 48px 56px;
+}
+
+.form.modal {
+    display: none;
+}
+
+.form.modal .caption {
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
+
+.form.modal .wpcf7-form-control-wrap.btn {
+    margin: 20px 0;
+}
+
+
+
 
 
 
@@ -891,11 +913,11 @@ footer .phone {
         width: 100%;
     }
 	
-	.form_screen .form .form_caption{
-		font-size:26px;
+	.form .form_caption{
+		font-size: 26px;
 	}
 	
-	.form_screen .form {
+	.form {
 		margin: 20px auto 0;
 	}
     
@@ -930,7 +952,7 @@ footer .phone {
 		box-sizing: border-box;
 	}
 	
-    .form_screen .form {
+    .form {
         padding: 40px 20px;
     } 
 	 

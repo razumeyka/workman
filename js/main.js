@@ -35,4 +35,6 @@ $(document).ready(function(){
     };
 
     var hackerList = new List('hacker-list', options);
+    
+    $('.fancybox').fancybox();
 })
