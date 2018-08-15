@@ -26,7 +26,7 @@ $(document).ready(function(){
         }
          $(this).closest('.carousel').find('.long').css('margin-left','-'+(slide*25)+'%');
 		$(this).closest('.carousel').data('slide',slide);
-    })
+    });
     
 // search
     var options = {
@@ -37,6 +37,15 @@ $(document).ready(function(){
     $('.branch').each(function(){
 
     })
+
+// fancybox
     
     $('.fancybox').fancybox();
+    
+    $('.list li').click(function(){
+        $.fancybox.open({
+            src  : '#order',
+            type : 'inline',
+        });
+    });
 })
