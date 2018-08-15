@@ -32,11 +32,10 @@ $(document).ready(function(){
     var options = {
     valueNames: [ 'name' ]
     };
-    var branch = new List('branch', options);
-    
-    $('.branch').each(function(){
 
-    })
+    $('.branch').each(function(){
+        var branch = new List('branch', options);
+    });
 
 // fancybox
     
