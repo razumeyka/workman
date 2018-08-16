@@ -34,7 +34,7 @@ $(document).ready(function(){
     };
 
     $('.branch').each(function(){
-        var branch = new List('branch', options);
+        var branch = new List(this,options);
     });
 
 // fancybox
