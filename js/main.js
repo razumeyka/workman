@@ -29,12 +29,17 @@ $(document).ready(function(){
     });
     
 // search
+    
     var options = {
     valueNames: [ 'name' ]
     };
-
-    $('.branch').each(function(){
-        var branch = new List(this,options);
+    
+    $(".search_input").keyup(function(){
+    var self=this;
+        $('.branch').each(function(){
+            var branch = new List(this,options);
+            branch.search($(self).val());
+        });
     });
 
 // fancybox
