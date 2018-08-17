@@ -31,16 +31,22 @@ $(document).ready(function(){
 // search
     
     var options = {
-    valueNames: [ 'name' ]
+        valueNames: [ 'name' ]
     };
+    var arr = [];
     
-    $(".search_input").keyup(function(){
-    var self=this;
-        $('.branch').each(function(){
-            var branch = new List(this,options);
-            branch.search($(self).val());
-        });
+    $('.branch').each(function(){
+        var branch = new List(this,options);
+        arr.push(branch);
     });
+        
+    $(".search_input").keyup(function(){
+        var self=this;
+        arr.forEach(function (branch, i, arr) {
+            branch.search($(self).val());
+        });   
+    });
+ 
 
 // fancybox
     
